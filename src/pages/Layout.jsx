@@ -4,9 +4,11 @@ import WhatsAppBtn from '../components/WhatsAppBtn'
 
 const Layout = ({children}) => {
   return (
-    <div>
+    <div className='relative'>
       <Header />
-      {children}
+      <div className='mt-16 md:mt-24'>
+        {children}
+      </div>
       <WhatsAppBtn />
     </div>
   )
