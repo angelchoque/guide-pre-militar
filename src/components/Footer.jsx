@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import { MdLocationPin } from 'react-icons/md'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { HiMailOpen } from 'react-icons/hi'
@@ -44,7 +45,7 @@ const Footer = () => {
         </div>
         
         <div className='absolute right-14 lg:order-1 md:static'>
-          <a href="/"><img src={footerLogo} alt="" /></a>
+          <Link to={"/"}><img src={footerLogo} alt="" /></Link>
         </div>
 
       </div>

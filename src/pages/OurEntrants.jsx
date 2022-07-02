@@ -34,7 +34,7 @@ const OurEntrants = () => {
   return (
     <>
       <Layout>
-        <div className='pt-8 bg-primary-light-grayish'>
+        <div className='bg-primary-light-grayish'>
           <TitlePage text="Conoce a nuestros ingresantes" />
           <CarouselEntrant autoPlay={false} content={content} showButtons={true} />
         </div>
