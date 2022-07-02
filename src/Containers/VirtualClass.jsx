@@ -4,7 +4,7 @@ import VirtualClassItem from '../components/VirtualClassItem'
 
 const VirtualClass = () => {
   return (
-    <div id='aula-virtual' className='bg-primary-light-grayish pb-14'>
+    <div id='aula-virtual' className='bg-primary-light-grayish pb-8 pt-32'>
       <div className='max-width'>
         <TitlePage text="Explora nuestra aula virtual" />
         <VirtualClassItem

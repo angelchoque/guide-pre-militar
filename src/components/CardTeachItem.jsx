@@ -8,7 +8,7 @@ const CardTeachItem = ({title, images, btnActive = false, len = 4}) => {
       <div className='flex flex-wrap justify-evenly px-4 py-2'>
         {images.map((item, index) => {
           return (
-            <picture key={`${index}_key`} className={`${len === 2 && 'w-full px-16'} w-1/2 px-6 py-3 ${item.gray && 'grayscale'}`}>
+            <picture key={`${index}_key`} className={`${len === 2 ? 'w-full px-16' : 'w-1/2'} px-6 py-3 ${item.gray && 'grayscale'}`}>
               <img className='w-full' src={item.src} alt={item.description} />
             </picture>
           )

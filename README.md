@@ -5,7 +5,7 @@ This is a solution to the [Technical Test](https://www.figma.com/file/BMSlmtw9Lm
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The test](#the-test)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -15,7 +15,7 @@ This is a solution to the [Technical Test](https://www.figma.com/file/BMSlmtw9Lm
 
 ## Overview
 
-### The challenge
+### The test
 
 Users should be able to:
 
@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/angelchoque/guide-pre-militar)
-- Live Site URL: [Add live site URL here](live)
+- Live Site URL: [Add live site URL here](https://vocal-horse-949e07.netlify.app/)
 
 ## My process
 
@@ -44,5 +44,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Angel Decide](https://www.angeldecode.com)
+- Website - [Angel Decode](https://www.angeldecode.com)
 

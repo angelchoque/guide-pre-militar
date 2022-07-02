@@ -7,7 +7,7 @@ const VirtualClassItem = ({order = 1, title, text}) => {
 
       <div className={`lg:w-1/2 ${order === 2 ? "lg:order-2" : "lg:order-1"}`}>
         <h3 className='font-semibold mb-6 text-center text-lg lg:text-start md:text-xl'>{title}</h3>
-        <p className='mb-8 text-sm md:text-xl'>{text}</p>
+        <p className='mb-8 text-sm md:text-xl text-justify'>{text}</p>
       </div>
 
       <picture className={`block w-full h-32 bg-primary-light-grayish rounded-3xl lg:rounded-xl

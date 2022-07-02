@@ -33,9 +33,9 @@ const OurEntrants = () => {
   />
   ]
   return (
-    <div id='nuestros-ingresantes' className='bg-primary-light-grayish'>
+    <div id='nuestros-ingresantes' className='bg-primary-light-grayish pb-16 pt-32'>
       <TitlePage text="Conoce a nuestros ingresantes" />
-      <CarouselEntrant autoPlay={false} content={content} showButtons={true} />
+      <CarouselEntrant content={content} />
     </div>
   )
 }

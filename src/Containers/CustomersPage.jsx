@@ -1,5 +1,5 @@
 import React from 'react'
-import Customers from '../Containers/Customers'
+import Customers from './Customers'
 
 const CustomersPage = () => {
   return (

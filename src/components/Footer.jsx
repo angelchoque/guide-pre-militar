@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
         
         <div className='absolute right-14 lg:order-1 md:static'>
-          <Link to={"/"}><img src={footerLogo} alt="" /></Link>
+          <a href="#hero"><img src={footerLogo} alt="logo guide" /></a>
         </div>
 
       </div>

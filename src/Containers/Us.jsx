@@ -4,7 +4,7 @@ import TitlePage from '../components/TitlePage';
 const Us = () => {
   return (
     <>
-      <div id='por-que-nosotros' className='bg-primary-light-grayish'>
+      <div id='por-que-nosotros' className='bg-primary-light-grayish pt-32'>
         <div className='max-width pb-16'>
           <TitlePage text="¿Por qué nosotros?" />
           <article className='flex flex-col md:flex-row md:justify-between text-primary-blue md:mt-12'>

@@ -79,7 +79,7 @@ const dataImagesBeca = [
 
 const Teachings = () => {
   return (
-    <div id='descubre' className='bg-primary-light-grayish pb-14'>
+    <div id='descubre' className='bg-primary-light-grayish pb-14 pt-32'>
       <div className='w-11/12 mx-auto pb-12'>
         <TitlePage text="Descubre lo que te enseñaremos" />
         <p className='text-center text-sm md:w-7/12 mx-auto md:text-lg'>
@@ -95,7 +95,7 @@ const Teachings = () => {
           <CardTeachItem title={"BECA 18 / IESTFFAA"} images={dataImagesBeca} btnActive={false} len={2} />
         </div>
       </div>
-
+      
       <img className='mx-auto my-4' src={poligondown} alt="" />
       <div className='bg-primary-blue text-white font-bold rounded-2xl mx-auto w-10/12 sm:w-80 py-3'>
         <span className='block text-center'>Desde</span>
