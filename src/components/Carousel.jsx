@@ -32,8 +32,8 @@ const Carousel = (props) => {
   //   selectNewImage(selectedIndex, props.images);
   // };
   return (
-    <div>
-      <picture className="block w-64 h-52 mx-auto border overflow-hidden">
+    <div className="w-full px-16">
+      <picture className="block w-full h-auto mx-auto overflow-hidden bg-primary-light-grayish rounded-3xl">
         <img
           // src={require(`../assets/${selectedImage}`).default}
           src={selectedImage}
@@ -53,7 +53,7 @@ const Carousel = (props) => {
         )}
       </div> */}
       <div className="text-center">
-        {props.images.map((item, index)=> <button onClick={() => setSelectedIndex(index)} key={item}>{selectedIndex === index ? "a" : "o"} </button>)}
+        {props.images.map((item, index)=> <button key={`${item}_%${index}`} className={`w-2.5 h-2.5 mx-1 rounded-full bg-primary-dark ${selectedIndex === index ? "bg-opacity-90" : "bg-opacity-50"} `}></button>)}
       </div>
     </div>
   );

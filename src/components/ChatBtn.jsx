@@ -3,7 +3,9 @@ import talkIcon from '../assets/talkicon.png'
 
 const ChatBtn = () => {
   return (
-    <button className='fixed bg-primary-red rounded-full p-3 right-0 bottom-0'><img src={talkIcon} alt="" /></button>
+    <button className='fixed bg-primary-red rounded-full p-2 right-2 bottom-3'>
+      <img src={talkIcon} alt="btn" />
+    </button>
   )
 }
 
