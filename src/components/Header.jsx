@@ -4,17 +4,19 @@ import { IoMdClose } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 
 import logo from '../assets/logo.png'
+import logoDesktop from '../assets/logoDesktop.png'
 
 const Header = () => {
+  const windowWidth = window.innerWidth;
   const [menu, setMenu] = useState(false)
   return (
-    <header className='w-full bg-primary-blue text-white fixed top-0'>
+    <header className='w-full bg-primary-blue text-white fixed z-40 top-0'>
       <nav className='h-16 md:h-24 flex items-center px-4 w-full max-width standar-width relative'>
         <ul className='flex justify-between items-center w-full'>
           <li className='md:basis-3/4'>
             <picture>
               <Link to={'/'}>
-                <img className='md:w-20' src={logo} alt="logo" />
+                <img className='md:w-20' src={windowWidth <= 768 ? logo : logoDesktop} alt="logo" />
               </Link>
             </picture>
           </li>

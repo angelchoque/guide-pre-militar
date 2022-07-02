@@ -4,13 +4,12 @@ import Customers from '../Containers/Customers'
 import Layout from './Layout'
 
 const Us = () => {
-  let windowWidth = window.innerWidth;
+  const windowWidth = window.innerWidth;
   return (
     <Layout>
       <div className='bg-primary-light-grayish'>
         <div className='max-width pb-16'>
           <TitlePage text="¿Por qué nosotros?" />
-          {/* <h2 className='text-center font-bold text-4xl'>¿Por qué nosotros?</h2> */}
           <article className='flex flex-col md:flex-row md:justify-between text-primary-blue mt-12'>
             <div className='text-center md:w-1/3'>
               <span className='text-7xl md:text-8xl font-semibold'>+5</span>

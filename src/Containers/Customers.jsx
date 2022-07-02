@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import civil from '../assets/civil.png'
 import militar from '../assets/militar.png'
-import TitlePage from '../components/TitlePage';
+import TitlePage from '../components/TitlePage'
 
 const Customers = () => {
-  const [hoverCivil, setHoverCivil] = useState(false);
-  const [hoverMilitar, setHoverMilitar] = useState(false);
+  const [hoverCivil, setHoverCivil] = useState(false)
+  const [hoverMilitar, setHoverMilitar] = useState(false)
   return (
     <div className='max-width pb-20'>
       <TitlePage text="¿A quienés nos dirigimos?" />
@@ -34,9 +34,9 @@ const Customers = () => {
           <div
             onMouseLeave={() => setHoverMilitar(false)}
             className={`show-text rounded-full bg-primary-purple overflow-hidden w-52 h-52
-            pt-16 px-4 text-xs text-white absolute top-0 ${!hoverMilitar && 'hidden'}`}
+            pt-10 px-4 text-xs text-white absolute top-0 ${!hoverMilitar && 'hidden'}`}
           >
-            Jóvenes que deseen postular a las Escuelas de Oficiales y Sub oficiales (FF. AA)SERVICIO MILITAR
+            Si estás prestando servicio militar o eres Licenciado y quieres postular a una Escuela de Oficiales y Sub oficiales (FF. AA), tenemos descuentos exclusivos para ti, gracias a nuestro convenio con las FF. AA.
           </div>
           <span className='text-2xl mt-6 block font-medium'>Servicio Militar</span>
         </div>

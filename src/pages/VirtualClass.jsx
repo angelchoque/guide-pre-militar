@@ -1,21 +1,28 @@
 import React from 'react'
 import TitlePage from '../components/TitlePage'
+import VirtualClassItem from '../components/VirtualClassItem'
 import Layout from './Layout'
 
 const VirtualClass = () => {
   return (
     <Layout>
-      <div>
+      <div className='max-width'>
         <TitlePage text="Explora nuestra aula virtual" />
-        {/* <h2 className='text-center font-bold text-2xl px-16 mb-8'></h2> */}
-        <div className='w-10/12 shadow-[0_0px_15px_2px_rgba(0,0,0,0.3)] rounded-2xl mx-auto
-                        py-8 px-6'>
-          <h3 className='font-semibold mb-6'>Clases en vivo/ grabadas</h3>
-          <p className='mb-8'>Accede a clases en vivo todos los días; si no puedes conectarte revisa tus clases grabadas.</p>
-          <picture className='block w-full h-52 bg-primary-light-grayish rounded-3xl'>
-            <img src="" alt="" />
-          </picture>
-        </div>
+        <VirtualClassItem
+          order={1}
+          title={"Clases en vivo/ grabadas"}
+          text={"Accede a clases en vivo todos los días; si no puedes conectarte revisa tus clases grabadas."}
+        />
+        <VirtualClassItem
+          order={2}
+          title={"Materiales de Estudio"}
+          text={"Descarga diapositivas, resúmenes, separatas y libros (acorde al prospecto de tu Escuela) y refuerza lo aprendido en clase."}
+        />
+        <VirtualClassItem
+          order={1}
+          title={"Simulacros"}
+          text={"Practica con evaluaciones semanales y mensuales para una mejor preparación."}
+        />
       </div>
     </Layout>
   )

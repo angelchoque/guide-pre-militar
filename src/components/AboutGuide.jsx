@@ -3,6 +3,7 @@ import React from 'react'
 import Carousel from './Carousel'
 
 import slider1 from '../assets/slider1.jpg'
+
 const images = [slider1, slider1, slider1, slider1]
 
 const AboutGuide = () => {

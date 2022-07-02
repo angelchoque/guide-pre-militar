@@ -2,34 +2,45 @@ import React from 'react'
 import Footer from '../components/Footer'
 import TitlePage from '../components/TitlePage'
 import Layout from './Layout'
-
+import EntrantItem from '../components/EntrantItem'
+import CarouselEntrant from '../components/CarouselEntrant'
+import avatar from '../assets/avatar.png'
+import avatar2 from '../assets/avatar2.png'
+import avatar3 from '../assets/avatar3.png'
 const OurEntrants = () => {
+  const content = [
+    <EntrantItem
+      avatar={avatar}
+      text={"Gracias a GUIDE logré mi ingreso. Lo que más me gustó fueron los profesores y las clases grabadas."}
+      name="Erick Arancibia"
+      entrant={"Ingresante ESOFA"}
+      score={5}
+    />,
+    <EntrantItem
+      avatar={avatar2}
+      text={"Comentario 2"}
+      name="Nombre"
+      entrant={"Escuela"}
+      score={5}
+    />,
+    <EntrantItem
+    avatar={avatar3}
+    text={"Comentario 3"}
+    name="Nombre"
+    entrant={"Escuela"}
+    score={5}
+  />
+  ]
   return (
-    <Layout>
-      <div className='pt-8'>
-        <TitlePage text="Conoce a nuestros ingresantes" />
-        {/* <h2 className='text-center font-bold text-2xl px-16 mb-8'></h2> */}
-        <div className='w-10/12 shadow-[0_0px_15px_2px_rgba(0,0,0,0.3)] rounded-2xl mx-auto
-                        py-8 px-6'>
-          <p className='mb-8 text-justify'>Gracias a GUIDE logré mi ingreso. Lo que más me gustó fueron los profesores y las clases grabadas.</p>
-          <div>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <article>
-              <p>
-                <span>Erick Arancibia</span>
-                <span>Ingresante ESOFA</span>
-              </p>
-            </article>
-          </div>
-          <div>
-            <span>s</span>
-          </div>
+    <>
+      <Layout>
+        <div className='pt-8'>
+          <TitlePage text="Conoce a nuestros ingresantes" />
+          <CarouselEntrant autoPlay={false} content={content} showButtons={true} />
         </div>
-      </div>
+      </Layout>
       <Footer />
-    </Layout>
+    </>
   )
 }
 
