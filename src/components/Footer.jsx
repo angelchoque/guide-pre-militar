@@ -43,7 +43,7 @@ const Footer = () => {
           </ul>
         </div>
         
-        <div className='lg:order-1'>
+        <div className='absolute right-14 lg:order-1 md:static'>
           <a href="/"><img src={footerLogo} alt="" /></a>
         </div>
 

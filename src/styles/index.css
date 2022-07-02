@@ -75,7 +75,9 @@
 .footer {
   background: #595858;
 }
-
+.card-teach {
+  height: 400px;
+}
 
 @media (min-width: 640px) {
   .standar-width {

@@ -8,6 +8,17 @@ import CardTeachItem from '../components/CardTeachItem'
 
 import EMCH from '../assets/EMCH.png'
 import ESNA from '../assets/ESNA.svg'
+import FAP from '../assets/FAP.png'
+import EOPNP from '../assets/EOPNP.png'
+
+import ETE from '../assets/ETE.png'
+import CITEN from '../assets/CITEN.png'
+import ESOFA from '../assets/ESOFA.png'
+import ESTPNP from '../assets/ESTPNP.png'
+
+import beca18 from '../assets/beca18.png'
+import IESTFFAA from '../assets/IESTFFAA.png'
+
 const dataImagesOfic = [
   {
     src: EMCH,
@@ -16,63 +27,53 @@ const dataImagesOfic = [
   },
   {
     src: ESNA,
-    description: "EMCH",
+    description: "ESNA",
     gray: true,
   },
   {
-    src: EMCH,
-    description: "EMCH",
+    src: FAP,
+    description: "FAP",
     gray: true,
   },
   {
-    src: EMCH,
-    description: "EMCH",
+    src: EOPNP,
+    description: "EOPNP",
     gray: true,
   },
 ]
 
 const dataImagesSub = [
   {
-    src: EMCH,
-    description: "EMCH",
+    src: ETE,
+    description: "ETE",
     gray: true,
   },
   {
-    src: EMCH,
-    description: "EMCH",
+    src: CITEN,
+    description: "CITEN",
     gray: true,
   },
   {
-    src: EMCH,
-    description: "EMCH",
+    src: ESOFA,
+    description: "ESOFA",
     gray: true,
   },
   {
-    src: EMCH,
-    description: "EMCH",
+    src: ESTPNP,
+    description: "ESTPNP",
     gray: true,
   },
 ]
 
 const dataImagesBeca = [
   {
-    src: EMCH,
-    description: "EMCH",
+    src: beca18,
+    description: "Beca 18",
     gray: true,
   },
   {
-    src: EMCH,
-    description: "EMCH",
-    gray: true,
-  },
-  {
-    src: EMCH,
-    description: "EMCH",
-    gray: true,
-  },
-  {
-    src: EMCH,
-    description: "EMCH",
+    src: IESTFFAA,
+    description: "IESTFFAA",
     gray: true,
   },
 ]
@@ -80,16 +81,20 @@ const dataImagesBeca = [
 const Teachings = () => {
   return (
     <Layout>
-      <div className='w-11/12 mx-auto pb-12'>
-        <TitlePage text="Descubre lo que te enseñaremos" />
-        <p className='text-center text-sm md:w-7/12 mx-auto md:text-lg'>Conoce más sobre nuestros <b>horarios</b>, los <b>asignaturas</b> que dictaremos y los pasos para <b>matricularte</b> descargando el <b>temario</b> de la Escuela a donde desees postular. </p>
+      <div className='bg-primary-light-grayish pb-14'>
+        <div className='w-11/12 mx-auto pb-12'>
+          <TitlePage text="Descubre lo que te enseñaremos" />
+          <p className='text-center text-sm md:w-7/12 mx-auto md:text-lg'>
+            Conoce más sobre nuestros <b>horarios</b>, los <b>asignaturas</b> que dictaremos y los pasos para <b>matricularte</b> descargando el <b>temario</b> de la Escuela a donde desees postular.
+          </p>
+        </div>
 
         <div className='lg:relative lg:h-52 lg:bg-primary-purple lg:mt-32 lg:mb-32'>
-          <div className='flex flex-col items-center lg:flex-row lg:justify-between lg:absolute 
+          <div className='flex flex-col items-center lg:flex-row lg:justify-evenly  lg:absolute 
                           -top-32 w-full max-width left-0 right-0'>
             <CardTeachItem title={"Oficiales"} images={dataImagesOfic} btnActive={true} />
             <CardTeachItem title={"Sub Oficiales"} images={dataImagesSub} btnActive={false} />
-            <CardTeachItem title={"BECA 18 / IESTFFAA"} images={dataImagesBeca} btnActive={false} />
+            <CardTeachItem title={"BECA 18 / IESTFFAA"} images={dataImagesBeca} btnActive={false} len={2} />
           </div>
         </div>
 
@@ -103,7 +108,6 @@ const Teachings = () => {
           <span className='block text-center'>el ciclo</span>
         </div>
         <img className='mx-auto my-4' src={poligondoup} alt="" />
-
       </div>
     </Layout>
   )

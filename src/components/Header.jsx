@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 import { FiMenu } from 'react-icons/fi'
 import { IoMdClose } from 'react-icons/io'
-import { Link } from 'react-router-dom'
 
 import logo from '../assets/logo.png'
 import logoDesktop from '../assets/logoDesktop.png'
 
 const Header = () => {
-  const windowWidth = window.innerWidth;
+  const windowWidth = window.innerWidth
   const [menu, setMenu] = useState(false)
   return (
     <header className='w-full bg-primary-blue text-white fixed z-40 top-0'>
