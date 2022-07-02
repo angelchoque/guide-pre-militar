@@ -1,12 +1,13 @@
 import React from 'react'
-import Footer from '../components/Footer'
+
 import TitlePage from '../components/TitlePage'
-import Layout from './Layout'
 import EntrantItem from '../components/EntrantItem'
 import CarouselEntrant from '../components/CarouselEntrant'
+
 import avatar from '../assets/avatar.png'
 import avatar2 from '../assets/avatar2.png'
 import avatar3 from '../assets/avatar3.png'
+
 const OurEntrants = () => {
   const content = [
     <EntrantItem
@@ -32,15 +33,10 @@ const OurEntrants = () => {
   />
   ]
   return (
-    <>
-      <Layout>
-        <div className='bg-primary-light-grayish'>
-          <TitlePage text="Conoce a nuestros ingresantes" />
-          <CarouselEntrant autoPlay={false} content={content} showButtons={true} />
-        </div>
-      </Layout>
-      <Footer />
-    </>
+    <div id='nuestros-ingresantes' className='bg-primary-light-grayish'>
+      <TitlePage text="Conoce a nuestros ingresantes" />
+      <CarouselEntrant autoPlay={false} content={content} showButtons={true} />
+    </div>
   )
 }
 

@@ -40,13 +40,15 @@ const Header = () => {
         <ul className={`slide-top fixed z-50 bg-white text-black font-medium text-lg
                         w-full left-0 top-16 px-6 py-8 ${menu ? 'block' : 'hidden'}
                         md:w-96 md:right-36 md:left-auto md:top-24 md:rounded-lg
-                        md:bg-opacity-90`}>
-          <li><Link className='block w-full border-b border-b-primary-dark py-2' to={"/"}>Acerca de GUIDE</Link></li>
-          <li><Link className='block w-full border-b border-b-primary-dark py-2' to={"/por-que-nosotros"}>¿Pór que nosotros?</Link></li>
-          <li><Link className='block w-full border-b border-b-primary-dark py-2' to={"/a-quienes-nos-dirigimos"}>¿A quienes nos dirigimos?</Link></li>
-          <li><Link className='block w-full border-b border-b-primary-dark py-2' to={"/descubre"}>Descubre lo que te enseñaremos</Link></li>
-          <li><Link className='block w-full border-b border-b-primary-dark py-2' to={"/aula-virtual"}>Explora nuestra aula virtual</Link></li>
-          <li><Link className='block w-full border-b border-b-primary-dark py-2' to={"/nuestros-ingresantes"}>Nuestros ingresantes</Link></li>
+                        md:bg-opacity-90`}
+            onClick={() => {setMenu(false)}}
+          >
+          <li><a className='block w-full border-b border-b-primary-dark py-2' href="#hero">Acerca de GUIDE</a></li>
+          <li><a className='block w-full border-b border-b-primary-dark py-2' href={"#por-que-nosotros"}>¿Pór que nosotros?</a></li>
+          <li><a className='block w-full border-b border-b-primary-dark py-2' href={"#a-quienes-nos-dirigimos"}>¿A quienes nos dirigimos?</a></li>
+          <li><a className='block w-full border-b border-b-primary-dark py-2' href={"#descubre"}>Descubre lo que te enseñaremos</a></li>
+          <li><a className='block w-full border-b border-b-primary-dark py-2' href={"#aula-virtual"}>Explora nuestra aula virtual</a></li>
+          <li><a className='block w-full border-b border-b-primary-dark py-2' href={"#nuestros-ingresantes"}>Nuestros ingresantes</a></li>
         </ul>
       </nav>
     </header>

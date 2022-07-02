@@ -3,7 +3,7 @@ import tropaDesktop from '../assets/tropadesktop.png'
 
 const Hero = () => {
   return (
-    <div className={`hero hero-tropa w-full bg-primary-light-grayish mt-16 overflow-hidden`}>
+    <div id='hero' className={`hero hero-tropa w-full bg-primary-light-grayish mt-16 overflow-hidden`}>
       <div className='max-width standar-width  flex items-center 
                       justify-center flex-col md:flex-row'>
         <div className='flex flex-col items-center pt-12 md:pt-0 md:items-start md:w-1/2'>

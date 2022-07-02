@@ -24,7 +24,7 @@ const Carousel = (props) => {
     }, 500)
   }
   return (
-    <div className="w-full px-16">
+    <div className="w-full px-8 md:px-16">
       <picture className="block w-full h-auto mx-auto overflow-hidden bg-primary-light-grayish rounded-3xl">
         <img
           src={selectedImage}
