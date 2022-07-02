@@ -1,11 +1,13 @@
 import React from 'react'
+import TitlePage from '../components/TitlePage'
 import Layout from './Layout'
 
 const VirtualClass = () => {
   return (
     <Layout>
-      <div className='pt-8'>
-        <h2 className='text-center font-bold text-2xl px-16 mb-8'>Explora nuestra aula virtual</h2>
+      <div>
+        <TitlePage text="Explora nuestra aula virtual" />
+        {/* <h2 className='text-center font-bold text-2xl px-16 mb-8'></h2> */}
         <div className='w-10/12 shadow-[0_0px_15px_2px_rgba(0,0,0,0.3)] rounded-2xl mx-auto
                         py-8 px-6'>
           <h3 className='font-semibold mb-6'>Clases en vivo/ grabadas</h3>

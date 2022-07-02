@@ -30,7 +30,7 @@
 }
 
 @keyframes show-text {
-  0%{transform:translateX(-100px)}
+  0%{transform:translateX(-80px)}
   100%{transform:translateX(0)}
 }
 
@@ -48,4 +48,21 @@
 .max-width {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.card-price::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 100px solid blue;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+}
+
+.carousel {
+  transition: 1s;
+  opacity: 0;
+}
+.loaded {
+  opacity: 1;
 }
