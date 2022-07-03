@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import Layout from './Layout'
 import Hero from '../components/Hero'
@@ -9,23 +9,7 @@ import Teachings from '../Containers/Teachings'
 import VirtualClass from '../Containers/VirtualClass'
 import OurEntrants from '../Containers/OurEntrants'
 
-
-import ChatBtn from '../components/ChatBtn'
-
 const Home = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <Layout>
       <Hero />
@@ -35,7 +19,6 @@ const Home = () => {
       <Teachings />
       <VirtualClass />
       <OurEntrants />
-      {scrollPosition > 5550 ? <></> : <ChatBtn />}
     </Layout>
   )
 }

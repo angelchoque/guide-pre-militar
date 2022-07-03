@@ -7,7 +7,7 @@ const Customers = () => {
   const [hoverCivil, setHoverCivil] = useState(false)
   const [hoverMilitar, setHoverMilitar] = useState(false)
   return (
-    <div id='a-quienes-nos-dirigimos' className='max-width pb-20 pt-32'>
+    <div id='a-quienes-nos-dirigimos' className='max-width pb-20 pt-32 bg-white'>
       <TitlePage text="¿A quienés nos dirigimos?" />
       <div className='flex flex-col items-center md:flex-row md:justify-evenly'>
         <div className='text-center relative z-0'>

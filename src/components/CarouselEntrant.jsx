@@ -17,7 +17,7 @@ const Carousel = ({content}) => {
     setSelectedContent(content[nextIndex]) // MOBILE
     setSelectedIndex(nextIndex)
 
-    if (windowWidth >= 1024) {
+    if (windowWidth >= 1200) {
       const newCards = []
       if (nextIndex === content.length - 2) {
         newCards.push(content[nextIndex])
@@ -46,22 +46,22 @@ const Carousel = ({content}) => {
 
   return (
     <>
-      <div className="max-width flex flex-col lg:w-8/12">
+      <div className="max-width flex flex-col xl:w-8/12">
         <div className="flex mt-4 justify-between">
-          {windowWidth >= 1024 
+          {windowWidth >= 1200
             ? cards.map((item, index) => (<div key={index}>{item}</div>))
             : selectedContent}
         </div>
         <div className="flex justify-center relative w-full max-width">
           <button
             disabled={(content.length < 3 && windowWidth >= 1024) ? true : false}
-            className="select-none outline-none p-2 lg:absolute lg:bottom-32 lg:-left-14"
+            className="select-none outline-none p-2 md:absolute md:bottom-32 md:left-12 xl:-left-14"
             onClick={previous}>
             <img className="inline-block" src={rowleft} alt="row icon" />
           </button>
           <button
             disabled={(content.length < 3 && windowWidth >= 1024) ? true : false}
-            className="select-none outline-none p-2 lg:absolute lg:bottom-32 lg:-right-14"
+            className="select-none outline-none p-2 md:absolute md:bottom-32 md:right-12 xl:-right-14"
             onClick={next}>
             <img className="inline-block" src={rowright} alt="row icon" />
           </button>
