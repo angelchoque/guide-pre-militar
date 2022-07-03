@@ -25,8 +25,8 @@ const Carousel = (props) => {
   }
   
   return (
-    <div className="w-full px-8 md:px-16 overflow-hidden">
-      <picture className="block w-full mx-auto h-64 overflow-hidden bg-primary-light-grayish rounded-3xl">
+    <div className="overflow-hidden">
+      <picture className="block w-64 mx-auto h-36 carousel-width overflow-hidden bg-primary-light-grayish rounded-3xl">
         <img
           src={selectedImage}
           alt="Gentleman"
