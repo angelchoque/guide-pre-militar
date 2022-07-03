@@ -3,32 +3,68 @@ import { useState } from "react"
 import rowleft from '../assets/rowleft.png'
 import rowright from '../assets/rowright.png'
 
-const Carousel = (props) => {
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const [selectedContent, setSelectedContent] = useState(props.content[0])
+const Carousel = ({content}) => {
+  const windowWidth = window.innerWidth
 
-  const selectNewImage = (index, content, next = true) => {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [selectedContent, setSelectedContent] = useState(content[0])
+
+  const [cards, setCards] = useState([content[0], content[1] ,content[2]]) // DESKTOP
+
+  const selectNewCard = (index, next = true) => {
     const condition = next ? selectedIndex < content.length - 1 : selectedIndex > 0
     const nextIndex = next ? (condition ? selectedIndex + 1 : 0) : condition ? selectedIndex - 1 : content.length - 1
-    setSelectedContent(content[nextIndex])
+    setSelectedContent(content[nextIndex]) // MOBILE
     setSelectedIndex(nextIndex)
+
+    if (windowWidth >= 1024) {
+      const newCards = []
+      if (nextIndex === content.length - 2) {
+        newCards.push(content[nextIndex])
+        newCards.push(content[nextIndex + 1])
+        newCards.push(content[0])
+      } else if (nextIndex === content.length - 1) {
+        newCards.push(content[nextIndex])
+        newCards.push(content[0])
+        newCards.push(content[1])
+      } else {
+        newCards.push(content[nextIndex])
+        newCards.push(content[nextIndex + 1])
+        newCards.push(content[nextIndex + 2])
+      }
+      setCards(newCards)
+    }
   }
 
   const previous = () => {
-    selectNewImage(selectedIndex, props.content, false)
+    selectNewCard(selectedIndex, false)
   }
 
   const next = () => {
-    selectNewImage(selectedIndex, props.content);
+    selectNewCard(selectedIndex)
   }
 
   return (
     <>
-      <div className="max-width flex flex-col static lg:relative">
-        {selectedContent}
-        <div className="flex justify-center">
-          <button className="select-none outline-none p-8 m-0 static lg:absolute lg:bottom-24 lg:left-72 lg:right-0 block" onClick={previous}><img src={rowleft} alt="row icon" /></button>
-          <button className="select-none outline-none p-8 m-0 static lg:absolute lg:bottom-24 lg:right-72 block" onClick={next}><img src={rowright} alt="row icon" /></button>
+      <div className="max-width flex flex-col lg:w-8/12">
+        <div className="flex mt-4 justify-between">
+          {windowWidth >= 1024 
+            ? cards.map((item, index) => (<div key={index}>{item}</div>))
+            : selectedContent}
+        </div>
+        <div className="flex justify-center relative w-full max-width">
+          <button
+            disabled={(content.length < 3 && windowWidth >= 1024) ? true : false}
+            className="select-none outline-none p-2 lg:absolute lg:bottom-32 lg:-left-14"
+            onClick={previous}>
+            <img className="inline-block" src={rowleft} alt="row icon" />
+          </button>
+          <button
+            disabled={(content.length < 3 && windowWidth >= 1024) ? true : false}
+            className="select-none outline-none p-2 lg:absolute lg:bottom-32 lg:-right-14"
+            onClick={next}>
+            <img className="inline-block" src={rowright} alt="row icon" />
+          </button>
         </div>
       </div>
     </>

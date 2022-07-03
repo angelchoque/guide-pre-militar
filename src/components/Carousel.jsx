@@ -23,9 +23,10 @@ const Carousel = (props) => {
       setSelectedIndex(nextIndex)
     }, 500)
   }
+  
   return (
-    <div className="w-full px-8 md:px-16">
-      <picture className="block w-full h-auto mx-auto overflow-hidden bg-primary-light-grayish rounded-3xl">
+    <div className="w-full px-8 md:px-16 overflow-hidden">
+      <picture className="block w-full mx-auto h-64 overflow-hidden bg-primary-light-grayish rounded-3xl">
         <img
           src={selectedImage}
           alt="Gentleman"
@@ -37,8 +38,8 @@ const Carousel = (props) => {
         {props.images.map((item, index) => {
           return (<button
                     key={`${item}_%${index}`}
-                    className={`w-2.5 h-2.5 mx-1 rounded-full bg-primary-dark
-                    ${selectedIndex === index ? "bg-opacity-90" : "bg-opacity-50"} `}
+                    className={`w-2.5 h-2.5 mx-1 rounded-full bg-gray-600
+                    ${selectedIndex === index ? "bg-opacity-90" : "bg-opacity-50"}`}
                     ></button>
                   )})}
       </div>

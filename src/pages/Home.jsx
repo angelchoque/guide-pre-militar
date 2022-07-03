@@ -26,7 +26,6 @@ const Home = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(scrollPosition)
   return (
     <Layout>
       <Hero />
@@ -36,7 +35,6 @@ const Home = () => {
       <Teachings />
       <VirtualClass />
       <OurEntrants />
-      {/* <ChatBtn /> */}
       {scrollPosition > 5550 ? <></> : <ChatBtn />}
     </Layout>
   )

@@ -3,8 +3,10 @@ import React from 'react'
 import Carousel from './Carousel'
 
 import slider1 from '../assets/slider1.jpg'
+import slider2 from '../assets/militar.png'
+import slider3 from '../assets/civil.png'
 
-const images = [slider1, slider1, slider1, slider1]
+const images = [slider1, slider2, slider3]
 
 const AboutGuide = () => {
   return (

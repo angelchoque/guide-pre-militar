@@ -25,12 +25,13 @@ const OurEntrants = () => {
       score={5}
     />,
     <EntrantItem
-    avatar={avatar3}
-    text={"Comentario 3"}
-    name="Nombre"
-    entrant={"Escuela"}
-    score={5}
-  />
+      avatar={avatar3}
+      text={"Comentario 3"}
+      name="Nombre"
+      entrant={"Escuela"}
+      score={5}
+    />,
+
   ]
   return (
     <div id='nuestros-ingresantes' className='bg-primary-light-grayish pb-16 pt-32'>
